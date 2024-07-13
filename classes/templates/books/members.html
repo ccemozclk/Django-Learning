@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Members </title>
+</head>
+<body>
+    <h1> Welcome to the Member Page! </h1>
+
+    <hr>
+        <h3> Members </h3>
+    <br>
+
+    <hr>
+        <li> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit saepe cumque ad voluptatem ex exercitationem quae reiciendis, harum illo dolorum corporis suscipit amet sunt culpa voluptas ipsam, praesentium voluptate tenetur.</li>
+        <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quae soluta ipsam magni reprehenderit explicabo, repellat, qui consectetur amet, laboriosam assumenda dicta. Atque praesentium impedit velit eligendi omnis sunt rerum.</li>
+    <br>
+{% if data1.title == 'hello' %}
+    <a href="{% url 'bookdetails' %}"> To Index Page </a>
+{% elif data1.title == 'django' %}
+    {{data1.title}}
+{% else %}
+    <h3> No Data </h3>
+{% endif %}
+</body>
+</html> 

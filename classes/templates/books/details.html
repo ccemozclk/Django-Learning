@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+</head>
+<body>
+    {% comment %}
+    <hr>
+        <hr>
+            <h2> Data 1 </h2>
+        <br>
+
+            <h3>{{ data1 }}</h3>
+        <hr>
+            {% for k,v in data1.items %}
+            {{k}}   {{v}} 
+            {% endfor %}
+        <br>
+        
+        <hr> 
+            {% for element in data1.list%}
+                <li>{{element}} </li>
+            {% endfor %}
+        <br>
+    <br>
+    {% endcomment %}
+
+    {% comment  %}
+    <hr>
+        <hr>
+            <h2>Data 2 </h2>
+        <br>
+
+            <h3>{{ data2 }}</h3>
+        <hr>
+            {% for book_ in data2%}
+            <hr>
+                <li>
+                    {{book_.title}} : {{book_.author}}
+                </li>
+            <br>
+            {% endfor %}
+        <br>
+    <br>
+    {% endcomment %}
+
+              
+
+    <hr>
+        <hr>
+            <h2> Data 3 </h2>
+        <br>
+        <hr>
+            <h3> {{data3}} </h3>
+        <br>
+        <hr>
+            {% for k,v in data3.items %}
+            <hr>
+                {{k}}
+                    {% for b_key, b_title in v.items%}
+                        <li> {{ b_key }} : {{b_title}}</li>
+                    {% endfor %}
+            <br>
+
+            {% endfor %}
+        <br>
+    <br>
+
+
+
+<a href="{% url 'members' %}"> To Member Page </a>
+
+
+
+
+</body>
+</html>
